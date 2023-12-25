@@ -2,13 +2,17 @@ package hello.spring.hellospring.service;
 
 import hello.spring.hellospring.domain.Member;
 import hello.spring.hellospring.repository.MemberRepository;
-import hello.spring.hellospring.repository.MemboryMemberRepository;
+import hello.spring.hellospring.repository.MemoryMemberRepository;
 import java.util.List;
 import java.util.Optional;
 
 public class MemberService {
 
-    private final MemberRepository memberRepository = new MemboryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     /**
      * 회원가입

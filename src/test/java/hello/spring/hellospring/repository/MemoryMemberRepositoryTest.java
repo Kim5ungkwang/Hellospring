@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 public class MemoryMemberRepositoryTest {
 
-    MemberRepository repository = new MemboryMemberRepository();
+    MemberRepository repository = new MemoryMemberRepository();
 
     @AfterEach
     public void afterEach() {
